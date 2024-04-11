@@ -166,7 +166,7 @@ function offsetX1(points, xoffsetX) {
 
 
 // Функция смещения прямоугольника по оси X. Она принимает объект-прямоугольник и на сколько единиц его сдвинуть.  ниже я буду уже мутировать передаваемый объект
-function offsetX1(points, xoffsetX) {
+function offsetX(points, xoffsetX) {
     rectanglePoint222222(points)
     points.a.x += xoffsetX    // в данном случае перезапишем скопированный объект. исходный сохранит свои значения
     points.b.x += xoffsetX
@@ -174,6 +174,40 @@ function offsetX1(points, xoffsetX) {
     points.d.x += xoffsetX
     console.log('мутируем передаваемый объект')
 }
-offsetX1(rectangle, 100)
-console.log(rectangle)    // dblbv xnj j,]trn venbhjdfk
+// offsetX(rectangle, 100)
+// console.log(rectangle)    // видим что объект мутировал
 
+
+
+// Функция смещения прямоугольника по оси Y. Она при нимает объект-прямоугольник и на сколько единиц его  сдвинуть. 
+function offsetY(points, xoffsetY) {
+    rectanglePoint222222(points)
+    points.a.y += xoffsetY    // в данном случае перезапишем скопированный объект. исходный сохранит свои значения
+    points.b.y += xoffsetY
+    points.c.y += xoffsetY
+    points.d.y += xoffsetY
+    console.log('мутируем передаваемый объект')
+}
+// offsetY(rectangle, 100)
+// console.log(rectangle)    // видим что объект мутировал
+
+
+
+// Функция смещения прямоугольника и по оси X и по  оси Y. Она принимает объект-прямоугольник и два значе ния: сдвиг по оси X и сдвиг по оси Y. 
+function offset(points, x, y) {
+    offsetX(points, x)
+    offsetY(points, y)
+    console.log('мутировали рередаваемый объект')
+}
+// offset(rectangle, 100, 1000)
+// console.log(rectangle)
+
+
+
+// Функция для проверки, находится ли точка внутри прямоугольника. Она принимает объект-прямоугольник и  координаты точки.
+
+
+function internalPoint(points, x, y) {
+    rectanglePoint222222(points)
+    // ХЗ
+}
