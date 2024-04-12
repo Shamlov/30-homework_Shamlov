@@ -205,9 +205,20 @@ function offset(points, x, y) {
 
 
 // Функция для проверки, находится ли точка внутри прямоугольника. Она принимает объект-прямоугольник и  координаты точки.
-
-
 function internalPoint(points, x, y) {
-    rectanglePoint222222(points)
-    // ХЗ
+    let minX = points.a.x
+    let maxX = points.c.x
+    if (minX > maxX) {
+        minX = points.c.x
+        maxX = points.a.x
+    } 
+    let minY = points.a.y
+    let maxY = points.c.y
+    if (minY > maxY) {
+        minY = points.c.y
+        maxY = points.a.y
+    }
+    return !!(minX < x && maxX > x && minY < y && maxY > y)
+    
 }
+// console.log(internalPoint(rectangle, 3, 11))
